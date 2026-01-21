@@ -1,38 +1,72 @@
-.layout-with-sidebar {
-  display: flex;
-  min-height: 100vh;
+$sidebar-width: 240px;
+$bg-color: #111827;
+$text-color: #e5e7eb;
+$accent-color: #6366f1;
 
-  &__content {
-    flex: 1;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.app-sidebar {
-  width: 240px;
-  background-color: #111827;
-  color: #e5e7eb;
+body {
+  display: flex;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: $sidebar-width;
+  background: $bg-color;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
   padding: 1.5rem 1rem;
 
+  &__logo {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 1.5rem;
+      color: $accent-color;
+    }
+  }
+
   &__nav {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
 
   &__link {
-    color: inherit;
+    color: $text-color;
     text-decoration: none;
     padding: 0.75rem 1rem;
     border-radius: 8px;
-    transition: background-color 0.2s ease;
+    transition: background 0.2s;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.08);
     }
 
-    &.is-active {
-      background-color: #6366f1;
-      color: #fff;
+    &.active {
+      background: $accent-color;
+      color: white;
+    }
+
+    &.logout {
+      color: #f87171;
     }
   }
+
+  &__footer {
+    margin-top: auto;
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
 }
