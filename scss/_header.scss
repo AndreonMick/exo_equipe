@@ -1,7 +1,13 @@
 @import "variables";
 
 header {
-  color: blue;
-
+  box-sizing: border-box;
+  text-align: center;
+  padding: 30px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 80px;
+  display: block;
+  background-color: rgb(231, 209, 201);
+  color: rgb(9, 9, 53);
 }
 
