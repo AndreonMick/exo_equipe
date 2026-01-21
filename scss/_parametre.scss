@@ -1,0 +1,102 @@
+// =======================
+// Variables (les tiennes)
+// =======================
+$color_primary : #14213d;
+$color_secondary: #fca311;
+$color_dark: #000000;
+$color_light: #e5e5e5;
+
+// =======================
+// Reset
+// =======================
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// =======================
+// Base
+// =======================
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $color_dark;
+    color: $color_light;
+}
+
+// =======================
+// Settings page
+// =======================
+.settings {
+    max-width: 520px;
+    margin: 60px auto;
+    padding: 32px;
+    background-color: $color_primary;
+    border-radius: 14px;
+
+    &__title {
+        text-align: center;
+        font-size: 26px;
+        margin-bottom: 30px;
+        color: $color_secondary;
+    }
+
+    &__section {
+        margin-bottom: 24px;
+
+        h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 14px;
+
+            input {
+                padding: 10px 12px;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                background-color: $color_light;
+                color: $color_dark;
+            }
+        }
+    }
+
+    &__save {
+        width: 100%;
+        padding: 14px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: $color_secondary;
+        color: $color_dark;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+
+        &:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+// =======================
+// Switch
+// =======================
+.switch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    input {
+        width: 18px;
+        height: 18px;
+        accent-color: $color_secondary;
+        cursor: pointer;
+    }
+}
