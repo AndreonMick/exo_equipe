@@ -1,8 +1,7 @@
-main h1 {
-  color: red;
-  background-color: aqua;
-}
-
-p {
-  background-color: black;
+main {
+  padding: 2rem;
+  color: rgb(255, 213, 0);
+  background-color: rgb(165, 116, 37);
+  border: 1px dashed rgb(255, 213, 0);
+  border-radius: 30px;
 }
